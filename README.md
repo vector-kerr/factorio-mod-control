@@ -35,14 +35,18 @@ This script allows you to mass enable/disable entire sets of mods in one hit. On
       full path to the mod set file, and it may need to be wrapped in double quotes
     * Click `Apply` followed by `OK`
     * Rename your shortcut to something meaningful, like `Activate Base Factorio Mods`
-  * Option 4: Create a shortcut for a modset (Linux)
+  * Option 4: Create a shortcut for a modset (Linux and OSX)
     * Create a new file
       `touch ./shortcut-name`
     * Open the file in your favourite editor (`vi`, `nano`, ...)
     * Add the following content, replacing appropriate file paths as required
       ```
       #!/bin/bash
-      python3 /path/to/control.py /path/to/modset.json
+      (
+        # The path here is for OSX; Linux will be different...
+        cd "/Users/vector/Library/Application Support/factorio/mods"
+        python3 control.py bob.modset.json
+      )
       ```
     * Save and quit
     * Add the execute bit to the permissions vector
