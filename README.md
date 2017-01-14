@@ -40,7 +40,8 @@ This script allows you to mass enable/disable entire sets of mods in one hit. On
       `touch ./shortcut-name`
     * Open the file in your favourite editor (`vi`, `nano`, ...)
     * Add the following content, replacing appropriate file paths as required
-      ```
+      
+      ```bash
       #!/bin/bash
       (
         # The path here is for OSX; Linux will be different...
@@ -48,6 +49,7 @@ This script allows you to mass enable/disable entire sets of mods in one hit. On
         python3 control.py bob.modset.json
       )
       ```
+      
     * Save and quit
     * Add the execute bit to the permissions vector
       `chmod u+x ./shortcut-name`
